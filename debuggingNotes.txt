@@ -1,0 +1,14 @@
+https://www.linkedin.com/in/justin-lee-32367ba3/
+
+doesn't work for this right now, profile_scraper works but when p.currentJob list is passed to scrap_profiles, it is only 1 item, therefore cant go thru this loop:
+for current_job in p.current_job:
+            if x < 4:
+                data.append(current_job.company.name)
+                data.append(current_job.position)
+                if current_job.location == None:
+                    data.append(None)
+                    data.append(None)
+                else:
+                    data.append(current_job.location.city)
+                    data.append(current_job.location.country)
+                x += 1
